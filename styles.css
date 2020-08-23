@@ -9,29 +9,35 @@
 .navbar{
   background-color: #fff;
   color: #000;
-  padding: 25px;
+  /* padding: 25px; */
+}
+
+.navbar-nav{
+  /* padding: 5px 50px; */
+  font-size: .85em;
+  text-transform: uppercase;
+  list-style-type: none;
+  overflow: hidden;
 }
 
 .list{
-  text-align: right;
-  padding: 5px 50px;
-  font-size: .85em;
-  text-transform: uppercase;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
 }
 
-.list .list-item a, 
+.list a{
+  display: block;
+  padding: 15px 15px;
+}
+
+.list a, 
 a:hover{
   text-decoration: none;
   color: #000;
 }
 
-.list-item{
-  display: inline-block;
-  position: relative;
-  padding: 0 15px;
-}
-
-.list-item:after{
+.list:after{
   content: "";
   display: block;
   margin: auto;
@@ -41,12 +47,24 @@ a:hover{
   transition: width .5s ease, background-color .5s ease;
 }
 
-.list-item:hover:after{
+.list:hover:after{
   width: 100%;
   background: #000;
 }
 
+.list-right{
+  text-align: right;
+}
+
+.list-left{
+  text-align: left;
+}
+
 /* SHOWCASE */
+html.sr .showcase{
+  visibility: hidden;
+}
+
 .showcase{
   max-height: 500px;
   overflow: hidden;
@@ -81,6 +99,10 @@ hr{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+
+html.sr .card{
+  visibility: hidden;
 }
 
 .card-title h5{

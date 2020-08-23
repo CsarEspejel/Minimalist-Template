@@ -11,16 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/11d69224ad.js" crossorigin="anonymous"></script>
+    <!-- SCROLLREVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <div class="navbar">
-      <ul class="list">
-        <li class="list-item"><a href="#">Interior Design</a></li>
-        <li class="list-item"><a href="#">About</a></li>
-        <li class="list-item"><a href="#">Portfolio</a></li>
-        <li class="list-item"><a href="#">Testimonials</a></li>
-        <li class="list-item"><a href="#">Blog</a></li>
-        <li class="list-item"><a href="#">Contact</a></li>
+      <ul class="navbar-nav">
+        <li class="list list-left" style="float: left;"><a href="#">Brand</a></li>
+        <li class="list list-right"><a href="#">Home</a></li>
+        <li class="list list-right"><a href="#">About</a></li>
+        <li class="list list-right"><a href="#">Blog</a></li>
+        <li class="list list-right"><a href="#">Contact</a></li>
       </ul>
     </div>
 
@@ -39,7 +40,7 @@
       <hr>
 
       <div class="card-group">
-        <div>
+        <div class="card">
           <div class="card-title">
             <h5>Title 1</h5>
           </div>
@@ -51,7 +52,7 @@
             <a href="#" class="btn" name="button">More info</a>
           </div>
         </div>
-        <div>
+        <div class="card">
           <div class="card-title">
             <h5>Title 2</h5>
           </div>
@@ -63,7 +64,7 @@
             <a href="#" class="btn" name="button">More info</a>
           </div>
         </div>
-        <div>
+        <div class="card">
           <div class="card-title">
             <h5>Title 3</h5>
           </div>
@@ -108,7 +109,16 @@
       <i class="fab fa-instagram"></i>
       <i class="fab fa-twitter"></i>
     </div>
+
     <script type="text/javascript" src="scripts.js">
+    </script>
+
+    <script>
+      ScrollReveal().reveal('.showcase');
+      ScrollReveal().reveal('.title', {delay : 500});
+      ScrollReveal().reveal('.card-title', {delay : 1000});
+      ScrollReveal().reveal('.post-instagram', {delay : 1000});
+      ScrollReveal().reveal('.card', {interval: 500});
     </script>
   </body>
 </html>
